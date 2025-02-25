@@ -1,0 +1,53 @@
+<template>
+    <!--<lightning-card>
+        <template lwc:if={expression1}>
+            Statement 1: Hi there
+        </template>
+        <template lwc:elseif={expression2}>
+            Statement 2: Hello
+        </template>
+        <template lwc:else>
+            Statement else
+        </template>
+    </lightning-card>
+
+    <lightning-card>
+        <template if:true={expression1}>
+            Statement 1: Hi there
+        </template>
+        <template if:false={expression1}>
+            <template if:true={expression2}>
+                Statement 2: Hello
+            </template>
+            <template if:false ={expression2}>
+                Statement else
+            </template>
+        </template>
+    </lightning-card>-->
+
+    <!--<lightning-card>
+        <template for:each={contacts} for:item="con">
+            <div key={con.id}>
+                {con.id} - {con.name} - {con.email}
+            </div>
+        </template>
+    </lightning-card>-->
+
+    <!--lightning-card>
+        <template for:each = {accountList} for:item="acc">
+            <div key={acc.Id}>
+            {acc.Id} - {acc.Name}
+            </div>
+        </template>
+    </lightning-card-->
+
+    <lightning-card>
+        <template iterator:it={contacts}>
+            <div key={it.value.id}>
+                <p lwc:if={it.first}>The first element starts from here.</p>
+                {it.value.id} - {it.value.name} - {it.value.email}
+                <p lwc:if={it.last}>This was the last element</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
